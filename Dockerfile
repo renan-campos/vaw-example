@@ -14,7 +14,7 @@ FROM gcr.io/distroless/static:nonroot
 USER nonroot:nonroot
 WORKDIR /
 COPY --from=builder /workspace/server .
-COPY --chown=nonroot:nonroot tls/localhost.crt tls/localhost.crt
-COPY --chown=nonroot:nonroot tls/localhost.key tls/localhost.key
+COPY --chown=nonroot:nonroot tls/server.crt tls/server.crt
+COPY --chown=nonroot:nonroot tls/server.key tls/server.key
 
 ENTRYPOINT ["/server"]

@@ -1,0 +1,22 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: no-secrets
+webhooks:
+- name: my-webhook.example.com
+  rules:
+  - operations: ["CREATE"]
+    apiGroups: [""]
+    apiVersions: ["v1"]
+    resources: ["secrets"]
+    scope: "Namespaced"
+  sideEffects: None
+  timeoutSeconds: 5
+  failurePolicy: Fail
+  admissionReviewVersions: ["v1"]
+  clientConfig:
+    service:
+      namespace: "default"
+      name: "vaw-example"
+      path: "/secret"
+    caBundle: CA_BUNDLE

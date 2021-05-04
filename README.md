@@ -1,5 +1,8 @@
 To run:
-$ bash run.sh
+$ bash scipts/run.sh
 
 To create image:
-$ bash run_image.sh
+$ bash scripts/run_image.sh
+
+To run webhook:
+$ bash scripts/run_webhook.sh
