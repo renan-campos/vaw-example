@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vaw-example
+  labels:
+    app: vaw-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vaw-example
+  template:
+    metadata:
+      labels:
+        app: vaw-example
+    spec:
+      containers:
+      - name: vaw-example
+        image: IMAGE_NAME
+        ports:
+        - containerPort: 9000
