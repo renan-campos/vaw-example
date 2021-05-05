@@ -1,4 +1,5 @@
 # Creates and runs the https server in minikube.
+source $(dirname $0)/keys.sh
 
 image="vaw-example"
 tag=$(date +%a-%H-%M-%S)

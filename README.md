@@ -1,10 +1,14 @@
-To run:
+To run locally:
 ```
 $ bash scipts/run.sh
 ```
-To create image:
+To run as pod:
 ```
-$ bash scripts/run_image.sh
+$ bash scripts/run_pod.sh
+```
+To run as service:
+```
+$ bash scripts/run_service.sh
 ```
 To run webhook:
 ```
