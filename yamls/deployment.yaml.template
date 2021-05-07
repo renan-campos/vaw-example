@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vaw-example
+  namespace: NAMESPACE
   labels:
     app: vaw-example
 spec:

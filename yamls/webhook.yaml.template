@@ -16,7 +16,7 @@ webhooks:
   admissionReviewVersions: ["v1"]
   clientConfig:
     service:
-      namespace: "default"
+      namespace: NAMESPACE
       name: "vaw-example"
       path: "/secret"
     caBundle: CA_BUNDLE
