@@ -20,3 +20,4 @@ spec:
         image: IMAGE_NAME
         ports:
         - containerPort: 443
+      serviceAccount: vaw-example

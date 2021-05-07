@@ -24,6 +24,9 @@ sed "s|NAMESPACE|$namespace|" > yamls/webhook.yaml
 
 sed "s|NAMESPACE|$namespace|" yamls/service.yaml.template > yamls/service.yaml
 
+sed "s|NAMESPACE|$namespace|" yamls/sa.yaml.template > yamls/sa.yaml
+
+oc apply -f yamls/sa.yaml
 oc apply -f yamls/deployment.yaml
 oc apply -f yamls/service.yaml
 oc apply -f yamls/webhook.yaml
